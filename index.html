@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список пользователей</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Список пользователей</h1>
+        <div class="filter">
+            <label for="ageFilter">Фильтр по возрасту (от):</label>
+            <input type="number" id="ageFilter" placeholder="Введите возраст">
+            
+        </div>
+        <div class="sort">
+            <label for="sortSelect">Сортировка:</label>
+            <select id="sortSelect" onchange="sortUsers()">
+                <option value="name">По имени</option>
+                <option value="age">По возрасту</option>
+            </select>
+        </div>
+        <button class="accept-filter-button" onclick="filterUsers()">Применить фильтр</button>
+        
+        <div id="userList"></div>
+    </div>
+    <script type="application/javascript" src="/js/script.js"></script>
+</body>
+</html>
